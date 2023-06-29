@@ -1,26 +1,27 @@
-function maxNumber(num) {
-  let max = num[0];
-  for (let i = 1; i < num.length; i++) {
-    if (num[i] > max) {
-      max = num[i];
+
+function max(numbers) {
+  // your code here, for-loop method preferred
+  let maxnum = numbers[0];
+  for (let i = 1 ; i<numbers.length; i++){
+    if (numbers[i] > maxnum){
+      maxnum = numbers[i];
     }
   }
-  return max;
+  return maxnum;
 }
 
-function findPosition(num, target) {
-  for (let i = 0; i < num.length; i++) {
-    if (num[i] === target) {
-      return i;
+function findPosition(numbers, target) {
+  // your code here, for-loop method preferred
+  for (let i = 0 ; i < numbers.length; i++){
+    if (numbers[i] === target){
+      return i
     }
   }
   return -1;
 }
-
-console.log(maxNumber([1, 2, 4, 5])); // should print 5
-console.log(maxNumber([5, 2, 7, 1, 6])); // should print 7
-
-console.log(findPosition([5, 2, 7, 1, 6], 5)); // should print 0
-console.log(findPosition([5, 2, 7, 1, 6], 7)); // should print 2
-console.log(findPosition([5, 2, 7, 7, 7, 1, 6], 7)); // should print 2
-console.log(findPosition([5, 2, 7, 1, 6], 8)); // should print -1
+  console.log(max([1, 2, 4, 5])); // should print 5
+  console.log(max([5, 2, 7, 1, 6])); // should print 7
+  console.log(findPosition([5, 2, 7, 1, 6], 5)); // should print 0
+  console.log(findPosition([5, 2, 7, 1, 6], 7)); // should print 2
+  console.log(findPosition([5, 2, 7, 7, 7, 1, 6], 7)); // should print 2 (the first position)
+  console.log(findPosition([5, 2, 7, 1, 6], 8)); // should print -1
